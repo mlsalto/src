@@ -1,0 +1,39 @@
+[1.250s] Invoking command in '/home/upm/ros2_ws/src/alg_gen': PYTHONPATH=/home/upm/ros2_ws/src/build/alg_gen/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/upm/ros2_ws/src/install/alg_gen/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/alg_gen build --build-base /home/upm/ros2_ws/src/build/alg_gen/build install --record /home/upm/ros2_ws/src/build/alg_gen/install.log --single-version-externally-managed install_data
+[1.484s] running egg_info
+[1.484s] creating ../build/alg_gen/alg_gen.egg-info
+[1.484s] writing ../build/alg_gen/alg_gen.egg-info/PKG-INFO
+[1.484s] writing dependency_links to ../build/alg_gen/alg_gen.egg-info/dependency_links.txt
+[1.485s] writing entry points to ../build/alg_gen/alg_gen.egg-info/entry_points.txt
+[1.486s] writing requirements to ../build/alg_gen/alg_gen.egg-info/requires.txt
+[1.486s] writing top-level names to ../build/alg_gen/alg_gen.egg-info/top_level.txt
+[1.486s] writing manifest file '../build/alg_gen/alg_gen.egg-info/SOURCES.txt'
+[1.486s] reading manifest file '../build/alg_gen/alg_gen.egg-info/SOURCES.txt'
+[1.487s] writing manifest file '../build/alg_gen/alg_gen.egg-info/SOURCES.txt'
+[1.487s] running build
+[1.487s] running build_py
+[1.487s] creating /home/upm/ros2_ws/src/build/alg_gen/build
+[1.488s] creating /home/upm/ros2_ws/src/build/alg_gen/build/lib
+[1.488s] creating /home/upm/ros2_ws/src/build/alg_gen/build/lib/alg_gen
+[1.488s] copying alg_gen/fit_node.py -> /home/upm/ros2_ws/src/build/alg_gen/build/lib/alg_gen
+[1.488s] copying alg_gen/gen_node.py -> /home/upm/ros2_ws/src/build/alg_gen/build/lib/alg_gen
+[1.488s] copying alg_gen/__init__.py -> /home/upm/ros2_ws/src/build/alg_gen/build/lib/alg_gen
+[1.488s] running install
+[1.489s] running install_lib
+[1.489s] creating /home/upm/ros2_ws/src/install/alg_gen/lib/python3.10/site-packages/alg_gen
+[1.489s] copying /home/upm/ros2_ws/src/build/alg_gen/build/lib/alg_gen/fit_node.py -> /home/upm/ros2_ws/src/install/alg_gen/lib/python3.10/site-packages/alg_gen
+[1.489s] copying /home/upm/ros2_ws/src/build/alg_gen/build/lib/alg_gen/gen_node.py -> /home/upm/ros2_ws/src/install/alg_gen/lib/python3.10/site-packages/alg_gen
+[1.489s] copying /home/upm/ros2_ws/src/build/alg_gen/build/lib/alg_gen/__init__.py -> /home/upm/ros2_ws/src/install/alg_gen/lib/python3.10/site-packages/alg_gen
+[1.490s] byte-compiling /home/upm/ros2_ws/src/install/alg_gen/lib/python3.10/site-packages/alg_gen/fit_node.py to fit_node.cpython-310.pyc
+[1.490s] byte-compiling /home/upm/ros2_ws/src/install/alg_gen/lib/python3.10/site-packages/alg_gen/gen_node.py to gen_node.cpython-310.pyc
+[1.490s] byte-compiling /home/upm/ros2_ws/src/install/alg_gen/lib/python3.10/site-packages/alg_gen/__init__.py to __init__.cpython-310.pyc
+[1.490s] running install_data
+[1.490s] creating /home/upm/ros2_ws/src/install/alg_gen/share/ament_index
+[1.490s] creating /home/upm/ros2_ws/src/install/alg_gen/share/ament_index/resource_index
+[1.490s] creating /home/upm/ros2_ws/src/install/alg_gen/share/ament_index/resource_index/packages
+[1.490s] copying resource/alg_gen -> /home/upm/ros2_ws/src/install/alg_gen/share/ament_index/resource_index/packages
+[1.490s] copying package.xml -> /home/upm/ros2_ws/src/install/alg_gen/share/alg_gen
+[1.490s] running install_egg_info
+[1.492s] Copying ../build/alg_gen/alg_gen.egg-info to /home/upm/ros2_ws/src/install/alg_gen/lib/python3.10/site-packages/alg_gen-0.0.0-py3.10.egg-info
+[1.493s] running install_scripts
+[1.512s] writing list of installed files to '/home/upm/ros2_ws/src/build/alg_gen/install.log'
+[1.540s] Invoked command in '/home/upm/ros2_ws/src/alg_gen' returned '0': PYTHONPATH=/home/upm/ros2_ws/src/build/alg_gen/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/upm/ros2_ws/src/install/alg_gen/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/alg_gen build --build-base /home/upm/ros2_ws/src/build/alg_gen/build install --record /home/upm/ros2_ws/src/build/alg_gen/install.log --single-version-externally-managed install_data

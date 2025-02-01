@@ -1,0 +1,17 @@
+package.xml
+setup.cfg
+setup.py
+../build/alg_gen/alg_gen.egg-info/PKG-INFO
+../build/alg_gen/alg_gen.egg-info/SOURCES.txt
+../build/alg_gen/alg_gen.egg-info/dependency_links.txt
+../build/alg_gen/alg_gen.egg-info/entry_points.txt
+../build/alg_gen/alg_gen.egg-info/requires.txt
+../build/alg_gen/alg_gen.egg-info/top_level.txt
+../build/alg_gen/alg_gen.egg-info/zip-safe
+alg_gen/__init__.py
+alg_gen/fit_node.py
+alg_gen/gen_node.py
+resource/alg_gen
+test/test_copyright.py
+test/test_flake8.py
+test/test_pep257.py

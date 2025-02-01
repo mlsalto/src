@@ -1,0 +1,55 @@
+[1.239s] Invoking command in '/home/upm/ros2_ws/src/intro_pkg': PYTHONPATH=/home/upm/ros2_ws/src/build/intro_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/upm/ros2_ws/src/install/intro_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/intro_pkg build --build-base /home/upm/ros2_ws/src/build/intro_pkg/build install --record /home/upm/ros2_ws/src/build/intro_pkg/install.log --single-version-externally-managed install_data
+[1.479s] running egg_info
+[1.479s] creating ../build/intro_pkg/intro_pkg.egg-info
+[1.480s] writing ../build/intro_pkg/intro_pkg.egg-info/PKG-INFO
+[1.480s] writing dependency_links to ../build/intro_pkg/intro_pkg.egg-info/dependency_links.txt
+[1.480s] writing entry points to ../build/intro_pkg/intro_pkg.egg-info/entry_points.txt
+[1.480s] writing requirements to ../build/intro_pkg/intro_pkg.egg-info/requires.txt
+[1.480s] writing top-level names to ../build/intro_pkg/intro_pkg.egg-info/top_level.txt
+[1.480s] writing manifest file '../build/intro_pkg/intro_pkg.egg-info/SOURCES.txt'
+[1.481s] reading manifest file '../build/intro_pkg/intro_pkg.egg-info/SOURCES.txt'
+[1.482s] writing manifest file '../build/intro_pkg/intro_pkg.egg-info/SOURCES.txt'
+[1.482s] running build
+[1.482s] running build_py
+[1.482s] creating /home/upm/ros2_ws/src/build/intro_pkg/build
+[1.482s] creating /home/upm/ros2_ws/src/build/intro_pkg/build/lib
+[1.483s] creating /home/upm/ros2_ws/src/build/intro_pkg/build/lib/intro_pkg
+[1.483s] copying intro_pkg/nodo.py -> /home/upm/ros2_ws/src/build/intro_pkg/build/lib/intro_pkg
+[1.483s] copying intro_pkg/publisher.py -> /home/upm/ros2_ws/src/build/intro_pkg/build/lib/intro_pkg
+[1.483s] copying intro_pkg/client.py -> /home/upm/ros2_ws/src/build/intro_pkg/build/lib/intro_pkg
+[1.483s] copying intro_pkg/server.py -> /home/upm/ros2_ws/src/build/intro_pkg/build/lib/intro_pkg
+[1.483s] copying intro_pkg/subscriber.py -> /home/upm/ros2_ws/src/build/intro_pkg/build/lib/intro_pkg
+[1.483s] copying intro_pkg/__init__.py -> /home/upm/ros2_ws/src/build/intro_pkg/build/lib/intro_pkg
+[1.484s] running install
+[1.484s] running install_lib
+[1.484s] creating /home/upm/ros2_ws/src/install/intro_pkg/lib/python3.10/site-packages/intro_pkg
+[1.485s] copying /home/upm/ros2_ws/src/build/intro_pkg/build/lib/intro_pkg/nodo.py -> /home/upm/ros2_ws/src/install/intro_pkg/lib/python3.10/site-packages/intro_pkg
+[1.485s] copying /home/upm/ros2_ws/src/build/intro_pkg/build/lib/intro_pkg/publisher.py -> /home/upm/ros2_ws/src/install/intro_pkg/lib/python3.10/site-packages/intro_pkg
+[1.485s] copying /home/upm/ros2_ws/src/build/intro_pkg/build/lib/intro_pkg/client.py -> /home/upm/ros2_ws/src/install/intro_pkg/lib/python3.10/site-packages/intro_pkg
+[1.485s] copying /home/upm/ros2_ws/src/build/intro_pkg/build/lib/intro_pkg/server.py -> /home/upm/ros2_ws/src/install/intro_pkg/lib/python3.10/site-packages/intro_pkg
+[1.485s] copying /home/upm/ros2_ws/src/build/intro_pkg/build/lib/intro_pkg/subscriber.py -> /home/upm/ros2_ws/src/install/intro_pkg/lib/python3.10/site-packages/intro_pkg
+[1.485s] copying /home/upm/ros2_ws/src/build/intro_pkg/build/lib/intro_pkg/__init__.py -> /home/upm/ros2_ws/src/install/intro_pkg/lib/python3.10/site-packages/intro_pkg
+[1.488s] byte-compiling /home/upm/ros2_ws/src/install/intro_pkg/lib/python3.10/site-packages/intro_pkg/nodo.py to nodo.cpython-310.pyc
+[1.488s] byte-compiling /home/upm/ros2_ws/src/install/intro_pkg/lib/python3.10/site-packages/intro_pkg/publisher.py to publisher.cpython-310.pyc
+[1.488s] byte-compiling /home/upm/ros2_ws/src/install/intro_pkg/lib/python3.10/site-packages/intro_pkg/client.py to client.cpython-310.pyc
+[1.488s] byte-compiling /home/upm/ros2_ws/src/install/intro_pkg/lib/python3.10/site-packages/intro_pkg/server.py to server.cpython-310.pyc
+[1.488s] byte-compiling /home/upm/ros2_ws/src/install/intro_pkg/lib/python3.10/site-packages/intro_pkg/subscriber.py to subscriber.cpython-310.pyc
+[1.488s] byte-compiling /home/upm/ros2_ws/src/install/intro_pkg/lib/python3.10/site-packages/intro_pkg/__init__.py to __init__.cpython-310.pyc
+[1.488s] running install_data
+[1.488s] creating /home/upm/ros2_ws/src/install/intro_pkg/share/ament_index
+[1.488s] creating /home/upm/ros2_ws/src/install/intro_pkg/share/ament_index/resource_index
+[1.488s] creating /home/upm/ros2_ws/src/install/intro_pkg/share/ament_index/resource_index/packages
+[1.488s] copying resource/intro_pkg -> /home/upm/ros2_ws/src/install/intro_pkg/share/ament_index/resource_index/packages
+[1.488s] copying package.xml -> /home/upm/ros2_ws/src/install/intro_pkg/share/intro_pkg
+[1.488s] creating /home/upm/ros2_ws/src/install/intro_pkg/share/intro_pkg/launch
+[1.488s] copying launch/launcher_launch.py -> /home/upm/ros2_ws/src/install/intro_pkg/share/intro_pkg/launch
+[1.488s] running install_egg_info
+[1.490s] Copying ../build/intro_pkg/intro_pkg.egg-info to /home/upm/ros2_ws/src/install/intro_pkg/lib/python3.10/site-packages/intro_pkg-0.0.0-py3.10.egg-info
+[1.491s] running install_scripts
+[1.513s] Installing client script to /home/upm/ros2_ws/src/install/intro_pkg/lib/intro_pkg
+[1.513s] Installing first_node script to /home/upm/ros2_ws/src/install/intro_pkg/lib/intro_pkg
+[1.513s] Installing publisher script to /home/upm/ros2_ws/src/install/intro_pkg/lib/intro_pkg
+[1.513s] Installing server script to /home/upm/ros2_ws/src/install/intro_pkg/lib/intro_pkg
+[1.513s] Installing subscriber script to /home/upm/ros2_ws/src/install/intro_pkg/lib/intro_pkg
+[1.513s] writing list of installed files to '/home/upm/ros2_ws/src/build/intro_pkg/install.log'
+[1.551s] Invoked command in '/home/upm/ros2_ws/src/intro_pkg' returned '0': PYTHONPATH=/home/upm/ros2_ws/src/build/intro_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/upm/ros2_ws/src/install/intro_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/intro_pkg build --build-base /home/upm/ros2_ws/src/build/intro_pkg/build install --record /home/upm/ros2_ws/src/build/intro_pkg/install.log --single-version-externally-managed install_data

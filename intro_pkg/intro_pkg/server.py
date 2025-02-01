@@ -6,9 +6,9 @@ from sensor_interfaces.srv import PID
 
 
 
-class MyNode(Node):
+class GetPIDClientNode(Node):
     def __init__(self):
-        super().__init__('my_server')
+        super().__init__('my_PID_server')
         self.server= self.create_service(PID, '/server' , self.callback_get_response_pid)
 
 
@@ -20,7 +20,7 @@ class MyNode(Node):
 def main(args=None):
     try:
         rclpy.init(args=args)
-        node = MyNode()
+        node = GetPIDClientNode()
         rclpy.spin(node)
     except KeyboardInterrupt:
         pass

@@ -1,0 +1,19 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from sensor_interfaces/srv/PID.srv
+// generated code does not contain a copyright notice
+
+
+module sensor_interfaces {
+  module srv {
+    struct PID_Request {
+      double p;
+
+      double i;
+
+      double d;
+    };
+    struct PID_Response {
+      int32 result;
+    };
+  };
+};

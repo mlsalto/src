@@ -1,0 +1,7 @@
+{
+  "package_name": "sensor_interfaces",
+  "non_idl_tuples": [
+    "/home/upm/ros2_ws/src/sensor_interfaces:msg/PID.msg",
+    "/home/upm/ros2_ws/src/sensor_interfaces:srv/PID.srv"
+  ]
+}

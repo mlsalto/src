@@ -1,0 +1,7 @@
+[console_scripts]
+client = intro_pkg.client:main
+first_node = intro_pkg.nodo:main
+publisher = intro_pkg.publisher:main
+server = intro_pkg.server:main
+subscriber = intro_pkg.subscriber:main
+

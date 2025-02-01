@@ -1,0 +1,6 @@
+Invoking command in '/home/upm/ros2_ws/src/build/sensor_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/upm/ros2_ws/src/sensor_interfaces -DCMAKE_INSTALL_PREFIX=/home/upm/ros2_ws/src/install/sensor_interfaces
+Invoked command in '/home/upm/ros2_ws/src/build/sensor_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/upm/ros2_ws/src/sensor_interfaces -DCMAKE_INSTALL_PREFIX=/home/upm/ros2_ws/src/install/sensor_interfaces
+Invoking command in '/home/upm/ros2_ws/src/build/sensor_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/upm/ros2_ws/src/build/sensor_interfaces -- -j6 -l6
+Invoked command in '/home/upm/ros2_ws/src/build/sensor_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/upm/ros2_ws/src/build/sensor_interfaces -- -j6 -l6
+Invoking command in '/home/upm/ros2_ws/src/build/sensor_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/upm/ros2_ws/src/build/sensor_interfaces
+Invoked command in '/home/upm/ros2_ws/src/build/sensor_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/upm/ros2_ws/src/build/sensor_interfaces

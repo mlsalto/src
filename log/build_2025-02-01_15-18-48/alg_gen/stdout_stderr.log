@@ -1,0 +1,37 @@
+running egg_info
+creating ../build/alg_gen/alg_gen.egg-info
+writing ../build/alg_gen/alg_gen.egg-info/PKG-INFO
+writing dependency_links to ../build/alg_gen/alg_gen.egg-info/dependency_links.txt
+writing entry points to ../build/alg_gen/alg_gen.egg-info/entry_points.txt
+writing requirements to ../build/alg_gen/alg_gen.egg-info/requires.txt
+writing top-level names to ../build/alg_gen/alg_gen.egg-info/top_level.txt
+writing manifest file '../build/alg_gen/alg_gen.egg-info/SOURCES.txt'
+reading manifest file '../build/alg_gen/alg_gen.egg-info/SOURCES.txt'
+writing manifest file '../build/alg_gen/alg_gen.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/upm/ros2_ws/src/build/alg_gen/build
+creating /home/upm/ros2_ws/src/build/alg_gen/build/lib
+creating /home/upm/ros2_ws/src/build/alg_gen/build/lib/alg_gen
+copying alg_gen/fit_node.py -> /home/upm/ros2_ws/src/build/alg_gen/build/lib/alg_gen
+copying alg_gen/gen_node.py -> /home/upm/ros2_ws/src/build/alg_gen/build/lib/alg_gen
+copying alg_gen/__init__.py -> /home/upm/ros2_ws/src/build/alg_gen/build/lib/alg_gen
+running install
+running install_lib
+creating /home/upm/ros2_ws/src/install/alg_gen/lib/python3.10/site-packages/alg_gen
+copying /home/upm/ros2_ws/src/build/alg_gen/build/lib/alg_gen/fit_node.py -> /home/upm/ros2_ws/src/install/alg_gen/lib/python3.10/site-packages/alg_gen
+copying /home/upm/ros2_ws/src/build/alg_gen/build/lib/alg_gen/gen_node.py -> /home/upm/ros2_ws/src/install/alg_gen/lib/python3.10/site-packages/alg_gen
+copying /home/upm/ros2_ws/src/build/alg_gen/build/lib/alg_gen/__init__.py -> /home/upm/ros2_ws/src/install/alg_gen/lib/python3.10/site-packages/alg_gen
+byte-compiling /home/upm/ros2_ws/src/install/alg_gen/lib/python3.10/site-packages/alg_gen/fit_node.py to fit_node.cpython-310.pyc
+byte-compiling /home/upm/ros2_ws/src/install/alg_gen/lib/python3.10/site-packages/alg_gen/gen_node.py to gen_node.cpython-310.pyc
+byte-compiling /home/upm/ros2_ws/src/install/alg_gen/lib/python3.10/site-packages/alg_gen/__init__.py to __init__.cpython-310.pyc
+running install_data
+creating /home/upm/ros2_ws/src/install/alg_gen/share/ament_index
+creating /home/upm/ros2_ws/src/install/alg_gen/share/ament_index/resource_index
+creating /home/upm/ros2_ws/src/install/alg_gen/share/ament_index/resource_index/packages
+copying resource/alg_gen -> /home/upm/ros2_ws/src/install/alg_gen/share/ament_index/resource_index/packages
+copying package.xml -> /home/upm/ros2_ws/src/install/alg_gen/share/alg_gen
+running install_egg_info
+Copying ../build/alg_gen/alg_gen.egg-info to /home/upm/ros2_ws/src/install/alg_gen/lib/python3.10/site-packages/alg_gen-0.0.0-py3.10.egg-info
+running install_scripts
+writing list of installed files to '/home/upm/ros2_ws/src/build/alg_gen/install.log'
