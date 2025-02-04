@@ -10,33 +10,37 @@ class Genetico(Node):
         super().__init__('genetic_algorithm_client')
         self.Fitness = 0
         self.w = (25., .6, 200., 15.)  # Pesos de ts, d, overshoot, ess
-        self.client = self.create_client(SimPID, '/sim_pid')
 
         # Esperar que el servicio esté disponible
         while not self.client.wait_for_service(1.0):
             self.get_logger().warn('Esperando servidor')
 
-    def llamada_control(self, Gen_Kp, Gen_Ki, Gen_Kd):
-        """Realiza la llamada al servidor ROS para obtener el fitness."""
+    def llamada_control(self, p, i, d):
+        client = self.create_client(SimPID, '/serv/sim_pid')
+
+        while not client.wait_for_service(1.0):
+            self.get_logger().warn('Waiting for server')
         request = SimPID.Request()
-        request.kp = Gen_Kp
-        request.ki = Gen_Ki
-        request.kd = Gen_Kd
+        request.kp = p
+        request.ki = i
+        request.kd = d
 
         future = self.client.call_async(request)
-        future.add_done_callback(partial(self.callback_get_fitness, p=Gen_Kp, i=Gen_Ki, d=Gen_Kd))
-        
-    def callback_get_fitness(self, future, p, i, d):
-        """ Recibe el resultado de fitness desde el servidor y lo almacena """
+        future.add_done_callback(partial(
+            self.callback_call_get_data_sim,
+            p=p, i=i, d=d
+        ))
+
+    def callback_call_get_data_sim(self, future, p, i, d):
         try:
             response = future.result()
-            fitness = response.fitness
-            self.get_logger().info(f"Fitness para (Kp: {p}, Ki: {i}, Kd: {d}): {fitness}")
-            # Aquí puedes usar el fitness obtenido para alguna operación
+            self.get_logger().info(f'{response}')
         except Exception as e:
-            self.get_logger().error(f"Error al obtener fitness: {str(e)}")
+            self.get_logger().error('{e}')
 
     def evaluate(self, chromosome):
+
+       # AQUÍ SE HACE LA LLAMADA/ VUELTA DE DATOS DEL SERVICIO :) 
         """Evaluar el cromosoma y obtener su fitness a través del servicio."""
         self.llamada_control(chromosome[0], chromosome[1], chromosome[2])
 
