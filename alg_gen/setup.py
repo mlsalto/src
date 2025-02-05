@@ -24,7 +24,8 @@ setup(
     entry_points={
         'console_scripts': 
         [
-            'server = alg_gen.pid_server_node:main',
+            'pid_server_node = alg_gen.pid_server_node:main',
+            'gen_node = alg_gen.gen_node:main',
         ],
     },
 )
