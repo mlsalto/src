@@ -1,0 +1,4 @@
+int32 population_size
+float64 mutation_rate
+float64 crossover_rate
+int32 generations

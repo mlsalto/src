@@ -25,6 +25,7 @@ setup(
         'console_scripts': 
         [
             'pid_server_node = alg_gen.pid_server_node:main',
+            'alg_pub_node = alg_gen.alg_pub_node:main',
             'gen_node = alg_gen.gen_node:main',
         ],
     },

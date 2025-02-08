@@ -15,6 +15,10 @@ def generate_launch_description():
         ),
         Node(
            package='alg_gen',
+           executable='alg_pub_node',
+        ),
+        Node(
+           package='alg_gen',
            executable='gen_node',
            parameters=[{
                 'wts': 25.,

@@ -1,13 +1,21 @@
 import random
 import rclpy
+import json
 from functools import partial
 from operator import itemgetter
+from alg_gen_interfaces.msg import GeneticParams
+
 from msgs_control.srv import SimPID
 from rclpy.node import Node
 
 class Genetico(Node):
     def __init__(self):
         super().__init__('genetic_algorithm_client')
+        # suscripcion a los topics  
+        self.subscriber = self.create_subscription(GeneticParams,"alg_gen_param_publisher", self.callback_topics, 10)
+
+
+        # declaracion de parámetros (pesos de ts, d overshoot y ess) 
         self.declare_parameter('wts', 25.0)
         self.declare_parameter('wd', .6)
         self.declare_parameter('wovs', 200.)
@@ -18,12 +26,50 @@ class Genetico(Node):
         self.w2 = self.get_parameter('wovs').get_parameter_value().double_value
         self.w3= self.get_parameter('wees').get_parameter_value().double_value
 
-        self.Fitness = 0
-        self.last_response = None
-
         self.w = (self.w0 , self.w1, self.w2, self.w3)  # Pesos de ts, d, overshoot, ess
+        
 
+        self.add_on_set_parameters_callback(self.on_parameter_update)
+
+        # inicialización de otras variables  
+        self.Fitness = 0
+        self.last_response = None   
+
+        # ejecución algoritmo genético base 
         self.genetic_algorithm(100, 3, 20, 0.33, 0.7),
+    
+
+    def on_parameter_update(self, params):
+        # Actualizar los parámetros cuando se cambian
+        for param in params:
+            if param.name == 'wts':
+                self.get_logger().info(f"Nuevo peso tiempo establecimiento: {param.value}")
+                self.w0 = param.value
+            elif param.name == 'wd':
+                self.get_logger().info(f"Nuevo peso d: {param.value}")
+                self.w1 = param.value
+            elif param.name == 'wovs':
+                self.get_logger().info(f"Nuevo peso overshoot: {param.value}")
+                self.w2 = param.value
+            elif param.name == 'wees':
+                self.get_logger().info(f"Nuevo peso error establecimiento: {param.value}")
+                self.w3 = param.value
+
+        self.w = (self.w0, self.w1, self.w2, self.w3)
+        self.get_logger().info(f'Valores actualizados: {self.w}')
+
+        return rclpy.parameter.SetParametersResult(successful=True)
+
+    def callback_topics(self, msg):
+        params = json.loads(msg.data)
+
+        population_size = params['population_size']
+        mutation_rate = params['mutation_rate']
+        crossover_rate = params['crossover_rate']
+        generations = params['generations']
+
+        self.genetic_algorithm(population_size, 3, generations,  mutation_rate, crossover_rate ),
+
 
     def llamada_control(self, p, i, d):
         client = self.create_client(SimPID, '/serv/sim_pid')
@@ -108,6 +154,9 @@ class Genetico(Node):
     
     # Algoritmo genético
     def genetic_algorithm(self, population_size, chromosome_length, generations, mutation_rate, crossover_rate):
+        self.get_logger().info("Ejecutando algoritmo genético...")
+        self.get_logger().info(f'{population_size, chromosome_length, generations, mutation_rate, crossover_rate}')
+        
         population = []
         for _ in range(population_size):
             chromosome = self.generate_random_chromosome(chromosome_length)
@@ -139,6 +188,7 @@ class Genetico(Node):
         # Devolver el mejor cromosoma de la última generación
         best_chromosome = min(evaluated_population, key=lambda x: x[1])#[0]
 
+        self.get_logger().info("El mejor chromosoma es:")
         self.get_logger().info(f'{best_chromosome}')
 
 def main(args=None):
