@@ -61,14 +61,20 @@ class Genetico(Node):
         return rclpy.parameter.SetParametersResult(successful=True)
 
     def callback_topics(self, msg):
-        params = json.loads(msg.data)
+        try:
+            population_size = msg.population_size
+            mutation_rate = msg.mutation_rate
+            crossover_rate = msg.crossover_rate
+            generations = msg.generations
 
-        population_size = params['population_size']
-        mutation_rate = params['mutation_rate']
-        crossover_rate = params['crossover_rate']
-        generations = params['generations']
+            self.get_logger().info(f"Received params: population_size={population_size}, "
+                                f"mutation_rate={mutation_rate}, crossover_rate={crossover_rate}, "
+                                f"generations={generations}")
 
-        self.genetic_algorithm(population_size, 3, generations,  mutation_rate, crossover_rate ),
+            self.genetic_algorithm(population_size, 3, generations, mutation_rate, crossover_rate)
+        except Exception as e:
+            self.get_logger().error(f"Error processing message: {e}")
+
 
 
     def llamada_control(self, p, i, d):
